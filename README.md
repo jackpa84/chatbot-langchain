@@ -1,5 +1,5 @@
 
-# Chatbot com LangChain e Cohere
+# Chatbot com LangChain e Cohere AI
 
 Este projeto é um chatbot desenvolvido com Django que utiliza o LangChain e o modelo de linguagem da Cohere para interagir com os usuários de forma amigável e útil.
 
