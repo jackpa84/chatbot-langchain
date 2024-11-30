@@ -1,2 +1,10 @@
 .idea
 .env
+db.sqlite3
+poetry.lock
+
+*.py[cod]
+__pycache__/
+*.so
+*.pyo
+*.pyclass
