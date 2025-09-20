@@ -1,10 +1,55 @@
-.idea
-.env
-db.sqlite3
-poetry.lock
-
-*.py[cod]
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
 *.so
-*.pyo
-*.pyclass
+
+# Distribution / packaging
+.Python
+build/
+dist/
+.eggs/
+*.egg-info/
+.installed.cfg
+pip-wheel-metadata/
+
+# Virtual environments
+venv/
+.env
+.env.*
+.venv/
+env/
+pythonenv*
+
+# Django stuff
+staticfiles/
+media/
+*.log
+
+# SQLite database (se existir)
+db.sqlite3
+
+# Testing & coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Type checkers & linters
+.mypy_cache/
+.pytype/
+.ruff_cache/
+
+# IDEs & OS
+.DS_Store
+.idea/
+.vscode/
+
+# Node (se usar assets)
+node_modules/
+
+# Misc
+*.swp
+*.swo
