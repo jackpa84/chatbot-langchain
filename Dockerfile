@@ -1,21 +1,19 @@
 FROM python:3.13-slim
 
-# Opcional: dependências de sistema se precisar compilar algo
-# RUN apt-get update && apt-get install -y --no-install-recommends build-essential git && rm -rf /var/lib/apt/lists/*
-
-# Poetry
-RUN pip install --upgrade pip && pip install poetry
+# Instala Poetry
+RUN pip install --upgrade pip && \
+    pip install poetry
 
 WORKDIR /code
 
-# Copia apenas os manifests para aproveitar cache de dependências
+# Copia o pyproject.toml e o poetry.lock
 COPY pyproject.toml poetry.lock* ./
 
-# Instala dependências sem instalar o pacote raiz (evita exigir README/código)
+# Instala dependências via Poetry
 RUN poetry config virtualenvs.create false \
-    && poetry install --no-interaction --no-ansi --no-root
+    && poetry install --no-interaction --no-ansi
 
-# Agora copia o restante do código
+# Copia o restante do projeto
 COPY . .
 
 # Se você realmente precisa instalar o projeto como pacote, faça depois que o código estiver copiado:
