@@ -1,4 +1,3 @@
-
 # Chatbot com LangChain e Cohere AI
 
 Este projeto é um chatbot desenvolvido com Django que utiliza o LangChain e o modelo de linguagem da Cohere para interagir com os usuários de forma amigável e útil.
@@ -7,7 +6,7 @@ Este projeto é um chatbot desenvolvido com Django que utiliza o LangChain e o m
 
 ## **Tecnologias Utilizadas**
 
-- **Python 3.12**
+- **Python 3.13**
 - **Django**
 - **LangChain**
 - **Cohere API**
@@ -36,7 +35,7 @@ Este projeto é um chatbot desenvolvido com Django que utiliza o LangChain e o m
 ## **Como Instalar e Rodar a Aplicação**
 
 ### **Pré-requisitos**
-- **Python 3.12** instalado.
+- **Python 3.13** instalado.
 - **Poetry** instalado. Caso não tenha, instale com:
   
     ```bash
@@ -52,13 +51,13 @@ Este projeto é um chatbot desenvolvido com Django que utiliza o LangChain e o m
 1. **Clone o repositório:**
 
     ```bash
-    git clone https://github.com/seu_usuario/seu_repositorio.git
+    git clone https://github.com/jackpa84/chatbot-langchain.git
     ```
 
 2. **Navegue até o diretório do projeto:**
 
     ```bash
-    cd seu_repositorio
+    cd chatbot-langchain
     ```
 
 3. **Crie um ambiente virtual (opcional, mas recomendado):**
@@ -149,4 +148,4 @@ Agora, você pode interagir com o chatbot diretamente pela interface web.
 Em caso de dúvidas ou sugestões, sinta-se à vontade para entrar em contato:
 
 - **Autor:** Jackson Pacheco  
-- **Email:** [jackpa1984@gmail.com](mailto:jackpa1984@gmail.com)
+- **Email:** [jackpa1984@gmail.com](mailto:jackpa1984@gmail.com).
