@@ -90,7 +90,7 @@ Este projeto é um chatbot desenvolvido com Django que utiliza o LangChain e o m
 
 ---
 
-### **Executando a Aplicação**
+### **Executando a Aplicação (local)**
 
 1. **Aplique as migrações do banco de dados:**
 
@@ -106,7 +106,7 @@ Este projeto é um chatbot desenvolvido com Django que utiliza o LangChain e o m
 
 3. **Acesse a aplicação em seu navegador:**
 
-    ```arduino
+    ```
     http://localhost:8000/
     ```
 
@@ -114,9 +114,57 @@ Agora, você pode interagir com o chatbot diretamente pela interface web.
 
 ---
 
+## **Executando com Docker**
+
+### Pré-requisitos
+- Docker instalado
+- Arquivo `.env` configurado conforme a seção "Configuração"
+
+### 1) Build da imagem
+
+```bash
+docker build -t chatbot-langchain:dev .
+```
+
+### 2) Aplicar migrações
+
+Execute uma tarefa pontual para aplicar as migrações dentro do container:
+
+```bash
+docker run --rm --env-file .env chatbot-langchain:dev python manage.py migrate
+```
+
+### 3) Subir a aplicação
+
+```bash
+docker run --name chatbot-langchain -d --env-file .env -p 8000:8000 chatbot-langchain:dev
+```
+
+- Acesse: http://localhost:8000/
+- Logs (opcional):
+
+```bash
+docker logs -f chatbot-langchain
+```
+
+### 4) Parar e remover o container
+
+```bash
+docker stop chatbot-langchain && docker rm chatbot-langchain
+```
+
+### Dicas
+- Ao alterar o código, recompile a imagem para refletir mudanças:
+
+```bash
+docker build -t chatbot-langchain:dev .
+```
+
+---
+
 ## **Estrutura do Projeto**
 
-```csharp
+```text
 ├── app
 │   ├── __init__.py
 │   ├── static
